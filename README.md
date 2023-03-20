@@ -16,11 +16,11 @@ Kam - Kam's strength revolve around connecting the front-end back-end functional
 
 ### How can you best utilize these strengths in the execution of your project?
 
-We expect to capitalize on our strengths as a team by referring to other members that are demonstrating a good understanding in the project in that particular area. 
+We expect to capitalize on our strengths as a team by referring to other members that are demonstrating a good understanding in the project in that particular area.
 
 ### In which professional competencies do you each want to develop greater strength?
 
-Cheryl - Wants to improve on her teamwork and time management capabilities. 
+Cheryl - Wants to improve on her teamwork and time management capabilities.
 
 Jonathan - Jonathan wants to work on motivation - staying consistent with tasks or projects that he does not have much interest in.
 
@@ -30,7 +30,7 @@ Kam - Wants to improve quality orientation and research/planning
 
 ### Knowing that every person in your team needs to understand all aspects of the project, how do you plan to approach the day-to-day work?
 
-Breaking down tasks effectively to make sure problems are being solved little-by-little to ensure we're making forward progress. Group-reflection and adjusting our goals to meet the rubric requirements will be a daily priority. 
+Breaking down tasks effectively to make sure problems are being solved little-by-little to ensure we're making forward progress. Group-reflection and adjusting our goals to meet the rubric requirements will be a daily priority.
 
 ## Conflict Plan
 
