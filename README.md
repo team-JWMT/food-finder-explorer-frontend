@@ -99,3 +99,72 @@ We are using GitHub Projects to keep track of the project tasks. Tasks will be d
 ### What project management tool will be used?
 
 GitHub Projects
+
+# Wireframe
+
+Homepage
+![Homepage](./img/Homepage.png)
+
+Results and Saved Collection page
+![Results and Saved Collection](./img/Results_Saved.png)
+
+About Us
+![About Us](./img/About.png)
+
+# Domain Modeling
+
+UML Diagram
+![UML Diagram](./img/UML_diagram.png)
+
+# User Stories
+
+### Search Milestone
+
+1) Search
+2) The user should be able to search for a specific food item or cuisine in a particular city/location.
+3) The task involved will need to request data from Yelp to help generate a list of businesses that are related to the search query the user has inputted in the search.
+4) Should recieve a JSON file that is an array of businesses object with business information properties that fulfill the search terms submitted to Yelp
+
+### Login Milestone
+
+1) Login
+2) The user should be able to login to keep a profile within the website
+3) The task invovles using Auth0 React component provided in their documentation to implement the login button, redirects to the Auth0 authentication server, rendering the profile info, and the logout button. Their profile info (name and email) should be stored into the database.
+4) The user should be able to go through Auth0 authentication service, see their profile info (ie name or email), and be able to logout.
+
+### Database Milestone
+
+1) Store and Retrieve
+2) The user profile should be stored in the database to keep their saved businesses unique to the user.
+3) The task invovles creating the database, have one collection that contains the following: User profile info and an array of favorited businesses object.
+4) The user should able to retrieve their favorited businesses if they're signed in when favorited.
+
+### Retrieve Milestone
+
+1) Retrieve favorited businesses
+2) The user clicks into "My Collection" and their favorited businesses would render. They would also have the option to delete any favorited businesses.
+3) The task invovles querying the database to retrieve the correct profile, and map out business components based on what was in the array of favorited businesses. If the user clicks delete on a specific business they want to remove, it is removed from the page and also deleted from the database.
+4) The user should see what they favorited and edit out what they don't want.
+
+# Database Schema
+
+The schema for this project would contain a two collections: Profile and Business
+
+The Profile schema will contain the following:
+
+1) Name (String, required)
+2) Email (String, required)
+3) Profile Img (string, not required)
+4) Array of Business Objects (objects, required)
+
+The Business schema will contain the following:
+
+1) Name (String, required)
+2) image_url (String, required)
+3) URL (String, required)
+4) Review Counts (Number, required)
+5) Category (Array, required)
+6) Rating (Number, required)
+7) Price range (String, required)
+8) dispplay_address (String, required)
+9) display_phone (String, required)
