@@ -18,7 +18,7 @@ class Content extends React.Component {
     const config = {
       method: 'get',
       baseURL: process.env.REACT_APP_SERVER,
-      url: '/books',
+      url: '/company',
       headers: {
       'Authorization': `Bearer ${jwt}`
         }
