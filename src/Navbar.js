@@ -8,6 +8,11 @@ class Navigationbar extends React.Component {
   render() {
     return (
       <Navbar bg="light" expand="lg" >
+         <Container>
+          <Searchform
+          handleInput={this.props.handleInput}
+          />
+        </Container>
         <Container>
           <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
 
@@ -20,9 +25,7 @@ class Navigationbar extends React.Component {
           </Nav>
 
         </Container>
-        <Container>
-          <Searchform/>
-        </Container>
+       
       </Navbar>
     );
   }
