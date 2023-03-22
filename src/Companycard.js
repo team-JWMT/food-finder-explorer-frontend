@@ -1,41 +1,37 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import CompanyModal from 'companymodal'
+import CompanyModal from './CompanyModal';
 
 
 class Companycard extends React.Component {
 
-  getCompanyData = () => {
-
-  }
-
   render() {
-    let cardComponent = this.props.data.map((business, idx) => {
+    let cardComponent = this.props.companies.map((business, idx) => {
 
       return (
-        <Card style={{ width: '18rem' }}>
+        <div key={idx} onClick={this.props.handleOpenModal}>
+        <Card>
           <Card.Title>{business.name}</Card.Title>
           <Card.Img src={business.image_url} />
           <Card.Body>
             {business.location}
             {business.rating}
-            {/* <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text> */}
-          <container onClick={this.props.handleOpenModal}></container>
+          <div onClick={this.props.handleOpenModal}>
             <Button variant="primary"><p onClick={this.handleDelete}>Delete Favorite</p></Button>
+            </div>
           </Card.Body>
         </Card>
-
+        </div>
+       
       );
-    })
-    return(
-    <main>
-    { cardComponent }
-    </main>
-  ); 
+    });
+    return (
+      <main>
+        {cardComponent}
+        <CompanyModal />
+      </main>
+    );
   }
 }
 export default Companycard;

@@ -1,5 +1,5 @@
 import React from 'react'
-import Modal from 'react-bootstrap'
+import Modal from 'react-bootstrap/Modal'
 
 export default class CompanyModal extends React.Component {
 constructor(props){
@@ -22,7 +22,7 @@ constructor(props){
   }
   render() {
     return (
-      <Modal onClick={this.handleOpenModal}>
+      <Modal onClick={this.handleCloseModal}>
       <Modal.Container>
         <Modal.Title>{this.data.name}</Modal.Title>
         <Modal.Image>{this.data.image_url}</Modal.Image>
