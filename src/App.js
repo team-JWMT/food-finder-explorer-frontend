@@ -3,7 +3,7 @@ import './App.css';
 import Navbar from './Navbar'
 import { withAuth0 } from '@auth0/auth0-react'
 import axios from 'axios';
-import Buisnesscard from './Buisnesscard';
+import Buisnesscard from './Companycard';
 
 class App extends React.Component {
 
@@ -13,7 +13,6 @@ class App extends React.Component {
       companies: [],
       isModalShowing: false,
       userInput: [],
-      listBusinesses: [],
     }
   }
 
@@ -24,31 +23,22 @@ class App extends React.Component {
     })
   };
 
-  getBusinessData = async (search, location) => {
+  getBusinessData = async (e) => {
+    e.preventDefault();
     try {
-
-      let reqToServer = await axios.get(`${process.env.REACT_APP_SERVER}/company?search=${search}&location=${location}`);
-
+      let reqToServer = await axios.get(`${process.env.REACT_APP_SERVER}/company?search=${this.state.foodForm}&location=${this.state.locationForm}`);
       this.setState({
-        listBusinesses: reqToServer.data,
-        rating: reqToServer.ratings,
-        name: reqToServer.name,
-        location: reqToServer.location,
-        img:reqToServer.image_url
-        
-
+        companies: reqToServer.data
       });
-
     } catch (error) {
-
       this.setState({
         error: true,
         errorMsg: `ERROR: ${error.response.status}`
-      });
+      })
     }
   }
 
-  render() {
+render() {
     return (
       <>
         <Navbar

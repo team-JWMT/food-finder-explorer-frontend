@@ -1,9 +1,10 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import CompanyModal from 'companymodal'
 
 
-class Buisnesscard extends React.Component {
+class Companycard extends React.Component {
 
   getCompanyData = () => {
 
@@ -23,6 +24,7 @@ class Buisnesscard extends React.Component {
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
           </Card.Text> */}
+          <container onClick={this.props.handleOpenModal}></container>
             <Button variant="primary"><p onClick={this.handleDelete}>Delete Favorite</p></Button>
           </Card.Body>
         </Card>
@@ -36,4 +38,4 @@ class Buisnesscard extends React.Component {
   ); 
   }
 }
-export default Buisnesscard;
+export default Companycard;
