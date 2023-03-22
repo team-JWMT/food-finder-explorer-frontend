@@ -1,0 +1,722 @@
+[
+  {
+    "name": "Serious Pie Downtown",
+    "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/dy0pJ5hIEX5APuotqrgF7A/o.jpg",
+    "url": "https://www.yelp.com/biz/serious-pie-downtown-seattle-2?adjust_creative=C7rf72hArHcT0BXox02P5w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=C7rf72hArHcT0BXox02P5w",
+    "review_count": 4498,
+    "categories": [
+      {
+        "alias": "pizza",
+        "title": "Pizza"
+      },
+      {
+        "alias": "salad",
+        "title": "Salad"
+      },
+      {
+        "alias": "bars",
+        "title": "Bars"
+      }
+    ],
+    "rating": 4,
+    "transactions": [
+      "pickup",
+      "delivery"
+    ],
+    "price": "$$",
+    "location": {
+      "address1": "2001 4th Ave",
+      "address2": null,
+      "address3": "",
+      "city": "Seattle",
+      "zip_code": "98121",
+      "country": "US",
+      "state": "WA",
+      "display_address": [
+        "2001 4th Ave",
+        "Seattle, WA 98121"
+      ]
+    },
+    "display_phone": "(206) 838-7388"
+  },
+  {
+    "name": "Moto",
+    "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/FBmvjyC1wH7-N_lIE_M_lQ/o.jpg",
+    "url": "https://www.yelp.com/biz/moto-seattle?adjust_creative=C7rf72hArHcT0BXox02P5w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=C7rf72hArHcT0BXox02P5w",
+    "review_count": 153,
+    "categories": [
+      {
+        "alias": "pizza",
+        "title": "Pizza"
+      },
+      {
+        "alias": "icecream",
+        "title": "Ice Cream & Frozen Yogurt"
+      }
+    ],
+    "rating": 4.5,
+    "transactions": [
+      "delivery"
+    ],
+    "price": "$$",
+    "location": {
+      "address1": "4526 42nd Ave SW",
+      "address2": "",
+      "address3": null,
+      "city": "Seattle",
+      "zip_code": "98116",
+      "country": "US",
+      "state": "WA",
+      "display_address": [
+        "4526 42nd Ave SW",
+        "Seattle, WA 98116"
+      ]
+    },
+    "display_phone": "(206) 420-8880"
+  },
+  {
+    "name": "Rocco's",
+    "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/AWBXTETwVoCALRNEO_f3eQ/o.jpg",
+    "url": "https://www.yelp.com/biz/roccos-seattle?adjust_creative=C7rf72hArHcT0BXox02P5w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=C7rf72hArHcT0BXox02P5w",
+    "review_count": 1762,
+    "categories": [
+      {
+        "alias": "bars",
+        "title": "Bars"
+      },
+      {
+        "alias": "pizza",
+        "title": "Pizza"
+      }
+    ],
+    "rating": 4,
+    "transactions": [
+      "delivery",
+      "pickup"
+    ],
+    "price": "$$",
+    "location": {
+      "address1": "2312 2nd Ave",
+      "address2": "",
+      "address3": "",
+      "city": "Seattle",
+      "zip_code": "98121",
+      "country": "US",
+      "state": "WA",
+      "display_address": [
+        "2312 2nd Ave",
+        "Seattle, WA 98121"
+      ]
+    },
+    "display_phone": "(206) 397-4210"
+  },
+  {
+    "name": "Dantini Pizza",
+    "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/E0xwT0_tt_0LK2_P5obKVA/o.jpg",
+    "url": "https://www.yelp.com/biz/dantini-pizza-seattle?adjust_creative=C7rf72hArHcT0BXox02P5w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=C7rf72hArHcT0BXox02P5w",
+    "review_count": 55,
+    "categories": [
+      {
+        "alias": "pizza",
+        "title": "Pizza"
+      },
+      {
+        "alias": "popuprestaurants",
+        "title": "Pop-Up Restaurants"
+      },
+      {
+        "alias": "salad",
+        "title": "Salad"
+      }
+    ],
+    "rating": 4.5,
+    "transactions": [],
+    "location": {
+      "address1": "1417 Elliott Ave W",
+      "address2": "",
+      "address3": null,
+      "city": "Seattle",
+      "zip_code": "98119",
+      "country": "US",
+      "state": "WA",
+      "display_address": [
+        "1417 Elliott Ave W",
+        "Seattle, WA 98119"
+      ]
+    },
+    "display_phone": "(206) 420-9912"
+  },
+  {
+    "name": "My Friend Derek's",
+    "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/d-DVGemIZzUhM9mzbV2kyw/o.jpg",
+    "url": "https://www.yelp.com/biz/my-friend-dereks-seattle?adjust_creative=C7rf72hArHcT0BXox02P5w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=C7rf72hArHcT0BXox02P5w",
+    "review_count": 23,
+    "categories": [
+      {
+        "alias": "foodtrucks",
+        "title": "Food Trucks"
+      },
+      {
+        "alias": "pizza",
+        "title": "Pizza"
+      }
+    ],
+    "rating": 5,
+    "transactions": [],
+    "location": {
+      "address1": "3632 Woodland Park Ave N",
+      "address2": "",
+      "address3": null,
+      "city": "Seattle",
+      "zip_code": "98103",
+      "country": "US",
+      "state": "WA",
+      "display_address": [
+        "3632 Woodland Park Ave N",
+        "Seattle, WA 98103"
+      ]
+    },
+    "display_phone": ""
+  },
+  {
+    "name": "West of Chicago Pizza Company",
+    "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/hzCo4vd2yMlmZ7j2Dk3K5g/o.jpg",
+    "url": "https://www.yelp.com/biz/west-of-chicago-pizza-company-seattle?adjust_creative=C7rf72hArHcT0BXox02P5w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=C7rf72hArHcT0BXox02P5w",
+    "review_count": 164,
+    "categories": [
+      {
+        "alias": "pizza",
+        "title": "Pizza"
+      }
+    ],
+    "rating": 4.5,
+    "transactions": [
+      "delivery"
+    ],
+    "price": "$$",
+    "location": {
+      "address1": "3770 SW Alaska St",
+      "address2": null,
+      "address3": "",
+      "city": "Seattle",
+      "zip_code": "98126",
+      "country": "US",
+      "state": "WA",
+      "display_address": [
+        "3770 SW Alaska St",
+        "Seattle, WA 98126"
+      ]
+    },
+    "display_phone": "(206) 339-3337"
+  },
+  {
+    "name": "Lupo",
+    "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/-qSKGYGNaCORWHKtbCBKsw/o.jpg",
+    "url": "https://www.yelp.com/biz/lupo-seattle-3?adjust_creative=C7rf72hArHcT0BXox02P5w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=C7rf72hArHcT0BXox02P5w",
+    "review_count": 183,
+    "categories": [
+      {
+        "alias": "pizza",
+        "title": "Pizza"
+      },
+      {
+        "alias": "bars",
+        "title": "Bars"
+      },
+      {
+        "alias": "italian",
+        "title": "Italian"
+      }
+    ],
+    "rating": 4.5,
+    "transactions": [
+      "delivery",
+      "pickup"
+    ],
+    "price": "$$",
+    "location": {
+      "address1": "4303 Fremont Ave N",
+      "address2": null,
+      "address3": "",
+      "city": "Seattle",
+      "zip_code": "98103",
+      "country": "US",
+      "state": "WA",
+      "display_address": [
+        "4303 Fremont Ave N",
+        "Seattle, WA 98103"
+      ]
+    },
+    "display_phone": "(206) 547-2144"
+  },
+  {
+    "name": "Hot Mama's Pizza",
+    "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/LEL1qjUtdXO8aUPV9U-WwQ/o.jpg",
+    "url": "https://www.yelp.com/biz/hot-mamas-pizza-seattle?adjust_creative=C7rf72hArHcT0BXox02P5w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=C7rf72hArHcT0BXox02P5w",
+    "review_count": 967,
+    "categories": [
+      {
+        "alias": "pizza",
+        "title": "Pizza"
+      }
+    ],
+    "rating": 4,
+    "transactions": [
+      "delivery"
+    ],
+    "price": "$",
+    "location": {
+      "address1": "700 E Pine St",
+      "address2": "",
+      "address3": "",
+      "city": "Seattle",
+      "zip_code": "98122",
+      "country": "US",
+      "state": "WA",
+      "display_address": [
+        "700 E Pine St",
+        "Seattle, WA 98122"
+      ]
+    },
+    "display_phone": "(206) 322-6444"
+  },
+  {
+    "name": "Johnny Mo's Pizzeria",
+    "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/8IAnDPt0FWQNx9pLvuSbNg/o.jpg",
+    "url": "https://www.yelp.com/biz/johnny-mos-pizzeria-seattle?adjust_creative=C7rf72hArHcT0BXox02P5w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=C7rf72hArHcT0BXox02P5w",
+    "review_count": 147,
+    "categories": [
+      {
+        "alias": "pizza",
+        "title": "Pizza"
+      }
+    ],
+    "rating": 4.5,
+    "transactions": [
+      "delivery",
+      "pickup"
+    ],
+    "price": "$$",
+    "location": {
+      "address1": "3272 Fuhrman Ave E",
+      "address2": "Ste 100",
+      "address3": null,
+      "city": "Seattle",
+      "zip_code": "98102",
+      "country": "US",
+      "state": "WA",
+      "display_address": [
+        "3272 Fuhrman Ave E",
+        "Ste 100",
+        "Seattle, WA 98102"
+      ]
+    },
+    "display_phone": "(206) 822-6272"
+  },
+  {
+    "name": "Cornelly",
+    "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/HlYYBTxylVQf6C-WZy-Ghw/o.jpg",
+    "url": "https://www.yelp.com/biz/cornelly-seattle?adjust_creative=C7rf72hArHcT0BXox02P5w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=C7rf72hArHcT0BXox02P5w",
+    "review_count": 104,
+    "categories": [
+      {
+        "alias": "pizza",
+        "title": "Pizza"
+      },
+      {
+        "alias": "salad",
+        "title": "Salad"
+      },
+      {
+        "alias": "pastashops",
+        "title": "Pasta Shops"
+      }
+    ],
+    "rating": 4.5,
+    "transactions": [
+      "delivery",
+      "pickup"
+    ],
+    "location": {
+      "address1": "601 Summit Ave E",
+      "address2": "",
+      "address3": null,
+      "city": "Seattle",
+      "zip_code": "98102",
+      "country": "US",
+      "state": "WA",
+      "display_address": [
+        "601 Summit Ave E",
+        "Seattle, WA 98102"
+      ]
+    },
+    "display_phone": ""
+  },
+  {
+    "name": "Bar Cotto",
+    "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/07DoPFljyge3LApw8qW-cg/o.jpg",
+    "url": "https://www.yelp.com/biz/bar-cotto-seattle?adjust_creative=C7rf72hArHcT0BXox02P5w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=C7rf72hArHcT0BXox02P5w",
+    "review_count": 347,
+    "categories": [
+      {
+        "alias": "bars",
+        "title": "Bars"
+      },
+      {
+        "alias": "pizza",
+        "title": "Pizza"
+      },
+      {
+        "alias": "italian",
+        "title": "Italian"
+      }
+    ],
+    "rating": 4.5,
+    "transactions": [
+      "delivery",
+      "pickup"
+    ],
+    "price": "$$",
+    "location": {
+      "address1": "1546 15th Ave",
+      "address2": "",
+      "address3": "",
+      "city": "Seattle",
+      "zip_code": "98122",
+      "country": "US",
+      "state": "WA",
+      "display_address": [
+        "1546 15th Ave",
+        "Seattle, WA 98122"
+      ]
+    },
+    "display_phone": "(206) 838-8081"
+  },
+  {
+    "name": "Guerilla Pizza Kitchen",
+    "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/uMrdEjc9J_4Tb1PtAb71UA/o.jpg",
+    "url": "https://www.yelp.com/biz/guerilla-pizza-kitchen-seattle?adjust_creative=C7rf72hArHcT0BXox02P5w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=C7rf72hArHcT0BXox02P5w",
+    "review_count": 1,
+    "categories": [
+      {
+        "alias": "pizza",
+        "title": "Pizza"
+      },
+      {
+        "alias": "popuprestaurants",
+        "title": "Pop-Up Restaurants"
+      }
+    ],
+    "rating": 5,
+    "transactions": [],
+    "location": {
+      "address1": "2300 E Cherry St",
+      "address2": "",
+      "address3": null,
+      "city": "Seattle",
+      "zip_code": "98122",
+      "country": "US",
+      "state": "WA",
+      "display_address": [
+        "2300 E Cherry St",
+        "Seattle, WA 98122"
+      ]
+    },
+    "display_phone": ""
+  },
+  {
+    "name": "Humble Pie",
+    "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/A08GOZ76GAAH6Sm_0_YAeQ/o.jpg",
+    "url": "https://www.yelp.com/biz/humble-pie-seattle?adjust_creative=C7rf72hArHcT0BXox02P5w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=C7rf72hArHcT0BXox02P5w",
+    "review_count": 365,
+    "categories": [
+      {
+        "alias": "pizza",
+        "title": "Pizza"
+      }
+    ],
+    "rating": 4,
+    "transactions": [
+      "delivery"
+    ],
+    "price": "$$",
+    "location": {
+      "address1": "525 Rainier Ave S",
+      "address2": "",
+      "address3": "",
+      "city": "Seattle",
+      "zip_code": "98144",
+      "country": "US",
+      "state": "WA",
+      "display_address": [
+        "525 Rainier Ave S",
+        "Seattle, WA 98144"
+      ]
+    },
+    "display_phone": "(206) 329-5133"
+  },
+  {
+    "name": "Blotto",
+    "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/Q4Y1CwKmapk89MYpoxCu7Q/o.jpg",
+    "url": "https://www.yelp.com/biz/blotto-seattle?adjust_creative=C7rf72hArHcT0BXox02P5w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=C7rf72hArHcT0BXox02P5w",
+    "review_count": 42,
+    "categories": [
+      {
+        "alias": "pizza",
+        "title": "Pizza"
+      }
+    ],
+    "rating": 4.5,
+    "transactions": [],
+    "location": {
+      "address1": "1830 12th Ave",
+      "address2": "",
+      "address3": null,
+      "city": "Seattle",
+      "zip_code": "98122",
+      "country": "US",
+      "state": "WA",
+      "display_address": [
+        "1830 12th Ave",
+        "Seattle, WA 98122"
+      ]
+    },
+    "display_phone": "(206) 403-1809"
+  },
+  {
+    "name": "Slices",
+    "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/GevkHx5c0rdkS3WHO7Bh2w/o.jpg",
+    "url": "https://www.yelp.com/biz/slices-seattle-4?adjust_creative=C7rf72hArHcT0BXox02P5w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=C7rf72hArHcT0BXox02P5w",
+    "review_count": 45,
+    "categories": [
+      {
+        "alias": "pizza",
+        "title": "Pizza"
+      },
+      {
+        "alias": "sandwiches",
+        "title": "Sandwiches"
+      },
+      {
+        "alias": "italian",
+        "title": "Italian"
+      }
+    ],
+    "rating": 3.5,
+    "transactions": [
+      "delivery",
+      "pickup"
+    ],
+    "price": "$",
+    "location": {
+      "address1": "809 Olive Way",
+      "address2": "",
+      "address3": null,
+      "city": "Seattle",
+      "zip_code": "98101",
+      "country": "US",
+      "state": "WA",
+      "display_address": [
+        "809 Olive Way",
+        "Seattle, WA 98101"
+      ]
+    },
+    "display_phone": "(206) 223-6150"
+  },
+  {
+    "name": "Pizzeria La Rocca",
+    "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/tjHF8ACmYEQU51MU_48AWg/o.jpg",
+    "url": "https://www.yelp.com/biz/pizzeria-la-rocca-seattle?adjust_creative=C7rf72hArHcT0BXox02P5w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=C7rf72hArHcT0BXox02P5w",
+    "review_count": 108,
+    "categories": [
+      {
+        "alias": "pizza",
+        "title": "Pizza"
+      },
+      {
+        "alias": "wine_bars",
+        "title": "Wine Bars"
+      },
+      {
+        "alias": "italian",
+        "title": "Italian"
+      }
+    ],
+    "rating": 4.5,
+    "transactions": [
+      "delivery",
+      "pickup"
+    ],
+    "price": "$$",
+    "location": {
+      "address1": "8404 Greenwood Ave N",
+      "address2": null,
+      "address3": null,
+      "city": "Seattle",
+      "zip_code": "98103",
+      "country": "US",
+      "state": "WA",
+      "display_address": [
+        "8404 Greenwood Ave N",
+        "Seattle, WA 98103"
+      ]
+    },
+    "display_phone": "(206) 556-7656"
+  },
+  {
+    "name": "Sunny Hill",
+    "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/T5bkj1PsZiOF6ioSIFTYlQ/o.jpg",
+    "url": "https://www.yelp.com/biz/sunny-hill-seattle?adjust_creative=C7rf72hArHcT0BXox02P5w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=C7rf72hArHcT0BXox02P5w",
+    "review_count": 85,
+    "categories": [
+      {
+        "alias": "pizza",
+        "title": "Pizza"
+      },
+      {
+        "alias": "burgers",
+        "title": "Burgers"
+      }
+    ],
+    "rating": 4.5,
+    "transactions": [
+      "delivery"
+    ],
+    "price": "$$",
+    "location": {
+      "address1": "3127 NW 85th St",
+      "address2": null,
+      "address3": "",
+      "city": "Seattle",
+      "zip_code": "98117",
+      "country": "US",
+      "state": "WA",
+      "display_address": [
+        "3127 NW 85th St",
+        "Seattle, WA 98117"
+      ]
+    },
+    "display_phone": "(206) 659-0355"
+  },
+  {
+    "name": "Windy City Pie",
+    "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/PPWb9KNJHPzKe6FHQCBmtw/o.jpg",
+    "url": "https://www.yelp.com/biz/windy-city-pie-seattle?adjust_creative=C7rf72hArHcT0BXox02P5w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=C7rf72hArHcT0BXox02P5w",
+    "review_count": 590,
+    "categories": [
+      {
+        "alias": "pizza",
+        "title": "Pizza"
+      },
+      {
+        "alias": "bars",
+        "title": "Bars"
+      },
+      {
+        "alias": "italian",
+        "title": "Italian"
+      }
+    ],
+    "rating": 4,
+    "transactions": [
+      "delivery",
+      "pickup"
+    ],
+    "price": "$$",
+    "location": {
+      "address1": "5918 Phinney Ave N",
+      "address2": null,
+      "address3": "",
+      "city": "Seattle",
+      "zip_code": "98103",
+      "country": "US",
+      "state": "WA",
+      "display_address": [
+        "5918 Phinney Ave N",
+        "Seattle, WA 98103"
+      ]
+    },
+    "display_phone": "(206) 486-4743"
+  },
+  {
+    "name": "Seattle Pizza and Bar",
+    "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/j5urTANA8ZFeaThfm-encA/o.jpg",
+    "url": "https://www.yelp.com/biz/seattle-pizza-and-bar-seattle?adjust_creative=C7rf72hArHcT0BXox02P5w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=C7rf72hArHcT0BXox02P5w",
+    "review_count": 42,
+    "categories": [
+      {
+        "alias": "pizza",
+        "title": "Pizza"
+      },
+      {
+        "alias": "sandwiches",
+        "title": "Sandwiches"
+      },
+      {
+        "alias": "beerbar",
+        "title": "Beer Bar"
+      }
+    ],
+    "rating": 4.5,
+    "transactions": [
+      "delivery",
+      "pickup"
+    ],
+    "price": "$$",
+    "location": {
+      "address1": "2801 Western Ave",
+      "address2": "Ste E",
+      "address3": "",
+      "city": "Seattle",
+      "zip_code": "98121",
+      "country": "US",
+      "state": "WA",
+      "display_address": [
+        "2801 Western Ave",
+        "Ste E",
+        "Seattle, WA 98121"
+      ]
+    },
+    "display_phone": "(206) 441-5188"
+  },
+  {
+    "name": "Razzís Pizzería",
+    "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/pCXBEc6ckrPc3i5f6k4unQ/o.jpg",
+    "url": "https://www.yelp.com/biz/razz%C3%ADs-pizzer%C3%ADa-seattle-8?adjust_creative=C7rf72hArHcT0BXox02P5w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=C7rf72hArHcT0BXox02P5w",
+    "review_count": 348,
+    "categories": [
+      {
+        "alias": "pizza",
+        "title": "Pizza"
+      },
+      {
+        "alias": "vegan",
+        "title": "Vegan"
+      },
+      {
+        "alias": "gluten_free",
+        "title": "Gluten-Free"
+      }
+    ],
+    "rating": 4,
+    "transactions": [
+      "delivery",
+      "pickup"
+    ],
+    "price": "$$",
+    "location": {
+      "address1": "1314 Howell St",
+      "address2": null,
+      "address3": "",
+      "city": "Seattle",
+      "zip_code": "98101",
+      "country": "US",
+      "state": "WA",
+      "display_address": [
+        "1314 Howell St",
+        "Seattle, WA 98101"
+      ]
+    },
+    "display_phone": "(206) 588-2425"
+  }
+]

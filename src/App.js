@@ -3,7 +3,7 @@ import './App.css';
 import Navbar from './Navbar'
 import { withAuth0 } from '@auth0/auth0-react'
 import axios from 'axios';
-import Buisnesscard from './Companycard';
+// import Companycard from './Companycard';
 
 class App extends React.Component {
 
@@ -18,18 +18,16 @@ class App extends React.Component {
 
   handleInput = (e) => {
     const { id, value } = e.target;
-
+    
     this.setState({
       [id]: value
     })
   };
 
-  getBusinessData = async (e) => {
+  getCompanyData = async (e) => {
     e.preventDefault();
-
     try {
       let reqToServer = await axios.get(`${process.env.REACT_APP_SERVER}/company?search=${this.state.foodForm}&location=${this.state.locationForm}`);
-
       this.setState({
         companies: reqToServer.data
       });
@@ -48,14 +46,16 @@ render() {
           authorization={this.props.auth0.isAuthenticated}
           handleInput={this.handleInput} />
 
-        <Buisnesscard 
+        {/* <Companycard 
+        data={this.state.companies}
         rating={this.state.rating}
         name={this.state.name}
         location={this.state.location}
         img={this.state.image_url}
 
-        />
+        /> */}
       </>
+
     );
   }
 }
