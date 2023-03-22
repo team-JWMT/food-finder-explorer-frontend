@@ -3,7 +3,7 @@ import './App.css';
 import Navbar from './Navbar'
 import { withAuth0 } from '@auth0/auth0-react'
 import axios from 'axios';
-// import Companycard from './Companycard';
+import Companycard from './Companycard';
 
 class App extends React.Component {
 
@@ -17,7 +17,7 @@ class App extends React.Component {
 
   handleInput = (e) => {
     const { id, value } = e.target;
-    
+
     this.setState({
       [id]: value
     })
@@ -38,14 +38,22 @@ class App extends React.Component {
     }
   }
 
-render() {
-  console.log(this.state);
+  render() {
+    console.log(this.state);
     return (
       <>
         <Navbar
           authorization={this.props.auth0.isAuthenticated}
-          handleInput={this.handleInput} 
-          searchSubmit={this.getCompanyData}/>
+          handleInput={this.handleInput}
+          searchSubmit={this.getCompanyData}
+        />
+        {this.state.companies.length > 0
+        &&
+          <Companycard
+            data={this.state.companies}
+          />
+        }
+
       </>
 
     );
