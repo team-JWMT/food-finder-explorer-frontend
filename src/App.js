@@ -12,7 +12,6 @@ class App extends React.Component {
     this.state = {
       companies: [],
       isModalShowing: false,
-      userInput: [],
     }
   }
 
@@ -27,7 +26,7 @@ class App extends React.Component {
   getCompanyData = async (e) => {
     e.preventDefault();
     try {
-      let reqToServer = await axios.get(`${process.env.REACT_APP_SERVER}/company?search=${this.state.foodForm}&location=${this.state.locationForm}`);
+      let reqToServer = await axios.get(`${process.env.REACT_APP_SERVER}/search?term=${this.state.foodForm}&location=${this.state.locationForm}`);
       this.setState({
         companies: reqToServer.data
       });
@@ -47,15 +46,6 @@ render() {
           authorization={this.props.auth0.isAuthenticated}
           handleInput={this.handleInput} 
           searchSubmit={this.getCompanyData}/>
-
-        {/* <Companycard 
-        data={this.state.companies}
-        rating={this.state.rating}
-        name={this.state.name}
-        location={this.state.location}
-        img={this.state.image_url}
-
-        /> */}
       </>
 
     );
