@@ -17,16 +17,19 @@ class App extends React.Component {
   }
 
   handleInput = (e) => {
-    this.setState({
-      userInput: [e.target[0].value, e.target[1].value]
+    const { id, value } = e.target;
 
+    this.setState({
+      [id]: value
     })
   };
 
   getBusinessData = async (e) => {
     e.preventDefault();
+
     try {
       let reqToServer = await axios.get(`${process.env.REACT_APP_SERVER}/company?search=${this.state.foodForm}&location=${this.state.locationForm}`);
+
       this.setState({
         companies: reqToServer.data
       });
@@ -53,7 +56,6 @@ render() {
 
         />
       </>
-
     );
   }
 }

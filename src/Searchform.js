@@ -6,16 +6,21 @@ class Searchform extends React.Component {
 
   render() {
     return (
-      <Form onSubmit={this.props.handleInput}>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-    
-          <Form.Control type="text" placeholder="What food are you in the mood for"  />
-          
+      <Form onSubmit={this.props.searchSubmit}>
+        <Form.Group className="mb-3" controlId="foodForm">
+          <Form.Control 
+            type="text" 
+            placeholder="What food are you in the mood for"
+            onChange={this.props.handleInput}  
+          />
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-      
-          <Form.Control type="text" placeholder="Location"  />
+        <Form.Group className="mb-3" controlId="locationForm">
+          <Form.Control 
+            type="text" 
+            placeholder="Location" 
+            onChange={this.props.handleInput}
+          />
         </Form.Group>
         <Button variant="primary" type="submit" >
           Submit
