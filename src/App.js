@@ -40,11 +40,13 @@ class App extends React.Component {
   }
 
 render() {
+  console.log(this.state);
     return (
       <>
         <Navbar
           authorization={this.props.auth0.isAuthenticated}
-          handleInput={this.handleInput} />
+          handleInput={this.handleInput} 
+          searchSubmit={this.getCompanyData}/>
 
         {/* <Companycard 
         data={this.state.companies}
