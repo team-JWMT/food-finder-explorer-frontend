@@ -11,29 +11,30 @@ class App extends React.Component {
     this.state = {
       companies: [],
       isModalShowing: false,
-      userInput: [],
       listBuisineses: [],
     }
   }
-  
-  handleInput = (e) => {
-    this.setState({
-      userInput: [e.target[0].value, e.target[1].value]
 
+
+  handleInput = (e) => {
+    const { id, value } = e.target;
+
+    this.setState({
+      [id]: value
     })
   };
 
-  getBusinessData = async (search, location) => {
-    try {
+  getBusinessData = async (e) => {
+    e.preventDefault();
 
-      let reqToServer = await axios.get(`${process.env.REACT_APP_SERVER}/company?search=${search}&location=${location}`);
+    try {
+      let reqToServer = await axios.get(`${process.env.REACT_APP_SERVER}/company?search=${this.state.foodForm}&location=${this.state.locationForm}`);
 
       this.setState({
-        listBuisineses: reqToServer.data,
+        companies: reqToServer.data
       });
 
     } catch (error) {
-
       this.setState({
         error: true,
         errorMsg: `ERROR: ${error.response.status}`
@@ -41,13 +42,14 @@ class App extends React.Component {
     }
   }
 
-
   render() {
+    console.log(this.state);
     return (
       <Navbar
-        authorization={this.props.auth0.isAuthenticated} 
+        authorization={this.props.auth0.isAuthenticated}
         handleInput={this.handleInput}
-     />
+        searchSubmit={this.getBusinessData}
+      />
     );
   }
 }
