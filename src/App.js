@@ -11,7 +11,7 @@ class App extends React.Component {
     this.state = {
       companies: [],
       isModalShowing: false,
-      listBuisineses: [],
+      listBusinesses: [],
     }
   }
 
