@@ -17,9 +17,10 @@ class App extends React.Component {
   }
 
   handleInput = (e) => {
+    const { id, value } = e.target;
+    
     this.setState({
-      userInput: [e.target[0].value, e.target[1].value]
-
+      [id]: value
     })
   };
 
