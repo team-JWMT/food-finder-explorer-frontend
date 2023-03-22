@@ -16,6 +16,7 @@ class Navigationbar extends React.Component {
         <Container>
           <Searchform
           handleInput={this.props.handleInput}
+          searchSubmit={this.props.searchSubmit}
           />
         </Container>
         <Container>
