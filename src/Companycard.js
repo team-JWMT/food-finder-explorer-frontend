@@ -17,7 +17,7 @@ class Companycard extends React.Component {
           <Card.Body>
             {business.location}
             {business.rating}
-          <div onClick={this.props.handleOpenModal}>
+            <div onClick={this.props.handleOpenModal}>
             <Button variant="primary"><p onClick={this.handleDelete}>Delete Favorite</p></Button>
             </div>
           </Card.Body>
