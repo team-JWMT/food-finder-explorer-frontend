@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './Navbar'
 import { withAuth0 } from '@auth0/auth0-react'
 import axios from 'axios';
+import Buisnesscard from './Companycard';
 
 class App extends React.Component {
 
@@ -11,9 +12,9 @@ class App extends React.Component {
     this.state = {
       companies: [],
       isModalShowing: false,
+      userInput: [],
     }
   }
-
 
   handleInput = (e) => {
     const { id, value } = e.target;
@@ -32,7 +33,6 @@ class App extends React.Component {
       this.setState({
         companies: reqToServer.data
       });
-
     } catch (error) {
       this.setState({
         error: true,
@@ -41,16 +41,25 @@ class App extends React.Component {
     }
   }
 
-  render() {
-    console.log(this.state);
+render() {
     return (
-      <Navbar
-        authorization={this.props.auth0.isAuthenticated}
-        handleInput={this.handleInput}
-        searchSubmit={this.getBusinessData}
-      />
+      <>
+        <Navbar
+          authorization={this.props.auth0.isAuthenticated}
+          handleInput={this.handleInput} />
+
+        <Buisnesscard 
+        rating={this.state.rating}
+        name={this.state.name}
+        location={this.state.location}
+        img={this.state.image_url}
+
+        />
+      </>
     );
   }
 }
+
+
 
 export default withAuth0(App);
