@@ -22,10 +22,10 @@ class App extends React.Component {
       companies: [],
       isModalShowing: false,
       modalInfo: {},
+      profileExists: false,
       profile_name: '',
       profile_email: '',
       favorites: []
-
     }
   }
 
@@ -42,6 +42,16 @@ class App extends React.Component {
     })
   }
 
+  checkProfileExists = async (email) => {
+    let check = await axios.get(`${process.env.REACT_APP_SERVER}/collection/${email}`)
+
+    if (check.data.length !== 0) {
+      this.setState({
+        profileExists: true
+      })
+    }
+  }
+
   handleInput = (e) => {
     const { id, value } = e.target;
 
@@ -52,7 +62,7 @@ class App extends React.Component {
 
   getCompanyData = async (e) => {
     e.preventDefault();
-    
+
     try {
       let reqToServer = await axios.get(`${process.env.REACT_APP_SERVER}/search?term=${this.state.foodForm}&location=${this.state.locationForm}`);
       this.setState({
@@ -84,6 +94,36 @@ class App extends React.Component {
     }
   }
 
+  profileToBackend = async () => {
+
+    if (this.props.auth0.isAuthenticated && this.state.profileExists) {
+      try {
+        let url = `${process.env.REACT_APP_SERVER}/collection/${this.state.profile_email}`;
+        let updatedProfile = await axios.put(url, { favorited: this.state.favorites });
+
+        this.setState({
+          favorites: updatedProfile.favorited
+        });
+
+      } catch (error) {
+        console.log(error.response);
+      }
+    } else {
+      try {
+        let profile = {
+          profile_name: this.state.profile_name,
+          profile_email: this.state.profile_email,
+          favorited: this.state.favorites
+        }
+        console.log(profile + " did not exist");
+        let url = `${process.env.REACT_APP_SERVER}/collection`;
+        await axios.post(url, profile)
+      } catch (error) {
+        console.log(error.response);
+      }
+    }
+  }
+
   render() {
     console.log(this.state);
     return (
@@ -93,7 +133,7 @@ class App extends React.Component {
             authorization={this.props.auth0.isAuthenticated}
             handleInput={this.handleInput}
             searchSubmit={this.getCompanyData}
-            getProfile={this.getProfileInfo}
+            sendToDB={this.profileToBackend}
           />
           <Routes>
             <Route
@@ -110,6 +150,7 @@ class App extends React.Component {
                   getClickedComp={this.getClickedCompanyInfo}
                   addFavorite={this.addToFavorites}
                   getProfile={this.getProfileInfo}
+                  checkProfile={this.checkProfileExists}
                 />
 
                 :

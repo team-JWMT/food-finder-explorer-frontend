@@ -16,15 +16,20 @@ class Navigationbar extends React.Component {
       <Navbar bg="light" expand="lg" >
         <Container>
           <Searchform
-          handleInput={this.props.handleInput}
-          searchSubmit={this.props.searchSubmit}
-          getProfile={this.props.getProfile}
+            handleInput={this.props.handleInput}
+            searchSubmit={this.props.searchSubmit}
           />
         </Container>
         <Container>
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/">Home</Nav.Link>
-            <Nav.Link as={Link} to="/collection">My Collection</Nav.Link>
+            <Nav.Link
+              as={Link}
+              to="/collection"
+              onClick={this.props.sendToDB}
+            >
+              My Collection
+            </Nav.Link>
             <Nav.Link as={Link} to="/results">Results</Nav.Link>
           </Nav>
 
@@ -35,8 +40,8 @@ class Navigationbar extends React.Component {
                 <Profile />
               </>
             ) : (
-              <LoginButton 
-                
+              <LoginButton
+
               />
             )}
           </Nav>

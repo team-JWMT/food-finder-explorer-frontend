@@ -12,8 +12,10 @@ class Companycard extends React.Component {
 
     if (isAuthenticated) {
 
+      this.props.checkProfile(this.props.auth0.user.email);
+
       let addStore = this.props.addFavorite;
-      addStore(company)
+      addStore(company);
       this.props.getProfile(this.props.auth0.user.name, this.props.auth0.user.email);
 
     } else {
@@ -25,10 +27,7 @@ class Companycard extends React.Component {
 
     let cardComponent = this.props.data.map((company, idx) => {
       return (
-
-
         <>
-
           <Card key={idx} onClick={() => this.props.getClickedComp(company)} style={{ width: '20rem' }}>
             <Card.Title>{company.name}</Card.Title>
             <Card.Img src={company.image_url} variant="top" />
@@ -41,8 +40,6 @@ class Companycard extends React.Component {
             </Card.Body>
           </Card>
         </>
-
-
       );
     });
 
