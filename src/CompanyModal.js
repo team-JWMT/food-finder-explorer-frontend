@@ -17,16 +17,20 @@ class CompanyModal extends React.Component {
   render() {
     return (
        <>
-          <Modal>
+          <Modal show={this.props.ModalState} onHide={this.props.CloseModal}>
           <Modal.Header>
-            <Modal.Title></Modal.Title>
+            <Modal.Title>{this.props.modalInfo.name}</Modal.Title>
+            <img src={this.props.modalInfo.image_url} alt={this.props.modalInfo.name} width={400} height={350}/>
           </Modal.Header>
-          <Modal.Body>
-{/* <p></p>
-<p></p> */}
+          <Modal.Body style={{display: "flex", flexDirection: "column"}}>
+            <p>Restaurant Rating: {this.props.modalInfo.rating}</p>
+            <p>Review Count: {this.props.modalInfo.review_count}</p>
+            <p>{this.props.modalInfo.url}</p>
+            <p>{this.props.modalInfo.display_phone}</p>
+
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={() => this.handleModalShowHide()}>
+            <Button variant="secondary" onClick={this.props.CloseModal}>
               Close
             </Button>
           </Modal.Footer>
