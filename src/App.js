@@ -3,7 +3,13 @@ import './App.css';
 import Navbar from './Navbar'
 import { withAuth0 } from '@auth0/auth0-react'
 import axios from 'axios';
-import Companycard from './Companycard';
+import CompanyCardResult from './CompanyCardResult';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
+import NoResults from './NoResults'
 
 class App extends React.Component {
 
@@ -12,7 +18,14 @@ class App extends React.Component {
     this.state = {
       companies: [],
       isModalShowing: false,
+      modalInfo: {},
     }
+  }
+
+  getClickedCompanyInfo = (company) => {
+    this.setState({
+      modalInfo: company
+    })
   }
 
   handleInput = (e) => {
@@ -42,18 +55,37 @@ class App extends React.Component {
     console.log(this.state);
     return (
       <>
-        <Navbar
-          authorization={this.props.auth0.isAuthenticated}
-          handleInput={this.handleInput}
-          searchSubmit={this.getCompanyData}
-        />
-        {this.state.companies.length > 0
-        &&
-          <Companycard
-            data={this.state.companies}
+        <Router>
+          <Navbar
+            authorization={this.props.auth0.isAuthenticated}
+            handleInput={this.handleInput}
+            searchSubmit={this.getCompanyData}
           />
-        }
-
+          <Routes>
+            <Route
+              exact path="/"
+              element=<h1>Homepage</h1>
+            >
+            </Route>
+            <Route
+              exact path="/results"
+              element={this.state.companies.length > 0 ?
+                <CompanyCardResult
+                  data={this.state.companies}
+                  getClickedComp={this.getClickedCompanyInfo}
+                />
+                :
+                <NoResults />
+              }
+            >
+            </Route>
+            <Route
+              exact path="/collection"
+              element=<h1>some collection</h1>
+            >
+            </Route>
+          </Routes>
+        </Router>
       </>
 
     );

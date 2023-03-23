@@ -2,24 +2,7 @@ import React from 'react'
 import Modal from 'react-bootstrap/Modal'
 
 export default class CompanyModal extends React.Component {
-constructor(props){
-  super(props);
-  this.state = {
-    isModalDisplaying: false
-    }
-  }
 
-  handleOpenModal = () => {
-    this.setState ({
-      isModalDisplaying: true
-    })
-  }
-
-  handleCloseModal = () => {
-    this.setState ({
-      isModalDisplaying: false
-    })
-  }
   render() {
     return (
       <Modal onClick={this.handleCloseModal}>
