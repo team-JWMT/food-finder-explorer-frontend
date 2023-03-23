@@ -24,8 +24,7 @@ class App extends React.Component {
       modalInfo: {},
       profile_name: '',
       profile_email: '',
-      favorites: []
-
+      favorites: [],
     }
   }
 
@@ -96,7 +95,7 @@ class App extends React.Component {
           <Routes>
             <Route
               exact path="/"
-              element=<h1>Homepage</h1>
+              element={<HomepageIcons/>}
             >
             </Route>
             <Route
@@ -116,11 +115,21 @@ class App extends React.Component {
             </Route>
             <Route
               exact path="/collection"
-              element=<h1>some collection</h1>
+              element={this.state.favorites.length > 0 ?
+
+                <CompanyCardResult
+                  data={this.state.favorites}
+                  getClickedComp={this.getClickedCompanyInfo}
+                />
+
+                :
+                <NoResults />
+              }
             >
             </Route>
           </Routes>
         </Router>
+
       </>
 
     );

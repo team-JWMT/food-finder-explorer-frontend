@@ -41,6 +41,7 @@ class Companycard extends React.Component {
             </Button>
           </Card.Body>
         </Card>
+        
         </>
 
   
