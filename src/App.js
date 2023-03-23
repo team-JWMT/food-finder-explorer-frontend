@@ -11,6 +11,7 @@ import {
   Route
 } from "react-router-dom";
 import NoResults from './NoResults'
+import CompanyModal from './CompanyModal'
 
 class App extends React.Component {
 
@@ -23,9 +24,22 @@ class App extends React.Component {
     }
   }
 
+  handleCloseModal = () => {
+this.setState({
+showModal: false,
+
+  });
+}
+handleOpenModal = () => {
+  this.setState({
+showModal:true,
+  });
+}
+
   getClickedCompanyInfo = (company) => {
     this.setState({
-      modalInfo: company
+      modalInfo: company,
+      isModalShowing: true,
     })
   }
 
@@ -71,10 +85,18 @@ class App extends React.Component {
             <Route
               exact path="/results"
               element={this.state.companies.length > 0 ?
+                <>
                 <CompanyCardResult
                   data={this.state.companies}
                   getClickedComp={this.getClickedCompanyInfo}
                 />
+                <CompanyModal
+                  CloseModal={this.handleCloseModal}
+                  ModalState={this.state.isModalShowing}
+
+                />
+
+                </>
                 :
                 <NoResults />
               }

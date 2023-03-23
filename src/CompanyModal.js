@@ -1,23 +1,41 @@
 import React from 'react'
-import Modal from 'react-bootstrap/Modal'
+import { Button, Modal } from 'react-bootstrap'
 
-export default class CompanyModal extends React.Component {
+class CompanyModal extends React.Component {
+
+  constructor() {
+    super();
+    this.state = {
+      showHide: false
+    }
+  }
+
+  handleModalShowHide() {
+    this.setState({ showHide: !this.state.showHide })
+  }
 
   render() {
     return (
-      <Modal onClick={this.handleCloseModal}>
-      <Modal.Container>
-        <Modal.Title>{this.data.name}</Modal.Title>
-        <Modal.Image>{this.data.image_url}</Modal.Image>
-      </Modal.Container>
-
-      <Modal.Container>
-        <p>{this.data.rating}</p>
-        <p>{this.data.location}</p>
-        <p>{this.data.url}</p>
-        <p>{this.data.yelpReview}</p>
-      </Modal.Container>
-    </Modal>
+       <>
+          <Modal>
+          <Modal.Header>
+            <Modal.Title></Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+{/* <p></p>
+<p></p> */}
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={() => this.handleModalShowHide()}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
+        </>
     )
-  }
+        
+  };
+
 }
+
+export default CompanyModal;
