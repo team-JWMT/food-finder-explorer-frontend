@@ -1,23 +1,45 @@
 import React from 'react'
-import Modal from 'react-bootstrap/Modal'
+import { Button, Modal } from 'react-bootstrap'
 
-export default class CompanyModal extends React.Component {
+class CompanyModal extends React.Component {
+
+  constructor() {
+    super();
+    this.state = {
+      showHide: false
+    }
+  }
+
+  handleModalShowHide() {
+    this.setState({ showHide: !this.state.showHide })
+  }
 
   render() {
     return (
-      <Modal onClick={this.handleCloseModal}>
-      <Modal.Container>
-        <Modal.Title>{this.data.name}</Modal.Title>
-        <Modal.Image>{this.data.image_url}</Modal.Image>
-      </Modal.Container>
+       <>
+          <Modal show={this.props.ModalState} onHide={this.props.CloseModal}>
+          <Modal.Header>
+            <Modal.Title>{this.props.modalInfo.name}</Modal.Title>
+            <img src={this.props.modalInfo.image_url} alt={this.props.modalInfo.name} width={400} height={350}/>
+          </Modal.Header>
+          <Modal.Body style={{display: "flex", flexDirection: "column"}}>
+            <p>Restaurant Rating: {this.props.modalInfo.rating}</p>
+            <p>Review Count: {this.props.modalInfo.review_count}</p>
+            <p>{this.props.modalInfo.url}</p>
+            <p>{this.props.modalInfo.display_phone}</p>
 
-      <Modal.Container>
-        <p>{this.data.rating}</p>
-        <p>{this.data.location}</p>
-        <p>{this.data.url}</p>
-        <p>{this.data.yelpReview}</p>
-      </Modal.Container>
-    </Modal>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={this.props.CloseModal}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
+        </>
     )
-  }
+        
+  };
+
 }
+
+export default CompanyModal;

@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+*,
+* ::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(255, 140, 50);
+  display: flexbox;
+  flex-direction: column;
+}
+
+.searchForm {
+  display: flex;
+  flex-direction: row;
+}
+

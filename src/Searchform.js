@@ -7,7 +7,7 @@ class Searchform extends React.Component {
   
   render() {
     return (
-      <Form onSubmit={this.props.searchSubmit}>
+      <Form onSubmit={this.handleSubmit} className="searchForm">
         <Form.Group className="mb-3" controlId="foodForm">
           <Form.Control 
             type="text" 

@@ -12,7 +12,8 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import NoResults from './NoResults'
+import NoResults from './NoResults';
+import CompanyModal from './CompanyModal';
 
 class App extends React.Component {
 
@@ -26,12 +27,26 @@ class App extends React.Component {
       profile_name: '',
       profile_email: '',
       favorites: []
+
     }
+  }
+
+  handleCloseModal = () => {
+    this.setState({
+      isModalShowing: false,
+
+    });
+  }
+  handleOpenModal = () => {
+    this.setState({
+      showModal: true,
+    });
   }
 
   getClickedCompanyInfo = (company) => {
     this.setState({
-      modalInfo: company
+      modalInfo: company,
+      isModalShowing: true,
     })
   }
 
@@ -138,21 +153,24 @@ class App extends React.Component {
           <Routes>
             <Route
               exact path="/"
-              element=<h1>Homepage</h1>
+              element={<HomepageIcons/>}
             >
             </Route>
             <Route
               exact path="/results"
               element={this.state.companies.length > 0 ?
-
-                <CompanyCardResult
-                  data={this.state.companies}
-                  getClickedComp={this.getClickedCompanyInfo}
-                  addFavorite={this.addToFavorites}
-                  getProfile={this.getProfileInfo}
-                  checkProfile={this.checkProfileExists}
-                />
-
+                <>
+                  <CompanyCardResult
+                    data={this.state.companies}
+                    getClickedComp={this.getClickedCompanyInfo}
+                    addFavorite={this.addToFavorites}
+                  />
+                  <CompanyModal
+                    CloseModal={this.handleCloseModal}
+                    ModalState={this.state.isModalShowing}
+                    modalInfo={this.state.modalInfo}
+                  />
+                </>
                 :
                 <NoResults />
               }
@@ -160,11 +178,25 @@ class App extends React.Component {
             </Route>
             <Route
               exact path="/collection"
-              element=<h1>some collection</h1>
+              element={this.state.favorites.length > 0 ?
+
+                <CompanyCardResult
+                  data={this.state.favorites}
+                  getClickedComp={this.getClickedCompanyInfo}
+                  addFavorite={this.addToFavorites}
+                  getProfile={this.getProfileInfo}
+                  checkProfile={this.checkProfileExists}
+
+                />
+
+                :
+                <NoResults />
+              }
             >
             </Route>
           </Routes>
         </Router>
+
       </>
 
     );
