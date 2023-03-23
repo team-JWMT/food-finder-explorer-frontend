@@ -7,6 +7,7 @@ import LoginButton from './Login';
 import LogoutButton from './Logout';
 import Profile from './Profile';
 import { withAuth0 } from '@auth0/auth0-react'
+import { Link } from 'react-router-dom';
 
 class Navigationbar extends React.Component {
   render() {
@@ -20,12 +21,10 @@ class Navigationbar extends React.Component {
           />
         </Container>
         <Container>
-          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            <Nav.Link href="#link">My Favorites</Nav.Link>
+            <Nav.Link as={Link} to="/">Home</Nav.Link>
+            <Nav.Link as={Link} to="/collection">My Collection</Nav.Link>
+            <Nav.Link as={Link} to="/results">Results</Nav.Link>
           </Nav>
 
           <Nav>
