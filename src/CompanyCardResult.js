@@ -11,7 +11,7 @@ class Companycard extends React.Component {
       return (
         <Card key={idx} onClick={() => this.props.getClickedComp(company)} style={{ width: '20rem' }}>
           <Card.Title>{company.name}</Card.Title>
-          <Card.Img src={company.image_url} />
+          <Card.Img src={company.image_url} variant="top"/>
           <Card.Body>
             {company.location.city}, {company.location.state}
             {company.rating}
