@@ -4,21 +4,10 @@ import Form from 'react-bootstrap/Form';
 import { withAuth0 } from '@auth0/auth0-react'
 
 class Searchform extends React.Component {
-
-  handleSubmit = (e) => {
-    e.preventDefault();
-
-    if(this.props.auth0.isAuthenticated) {
-      this.props.getProfile(this.props.auth0.user.name, this.props.auth0.user.email);
-    }
-
-    this.props.searchSubmit(e);
-
-  }
   
   render() {
     return (
-      <Form onSubmit={this.handleSubmit}>
+      <Form onSubmit={this.props.searchSubmit}>
         <Form.Group className="mb-3" controlId="foodForm">
           <Form.Control 
             type="text" 

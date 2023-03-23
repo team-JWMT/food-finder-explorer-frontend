@@ -41,6 +41,7 @@ class App extends React.Component {
       profile_email: email
     })
   }
+
   handleInput = (e) => {
     const { id, value } = e.target;
 
@@ -50,7 +51,8 @@ class App extends React.Component {
   };
 
   getCompanyData = async (e) => {
-
+    e.preventDefault();
+    
     try {
       let reqToServer = await axios.get(`${process.env.REACT_APP_SERVER}/search?term=${this.state.foodForm}&location=${this.state.locationForm}`);
       this.setState({
@@ -107,6 +109,7 @@ class App extends React.Component {
                   data={this.state.companies}
                   getClickedComp={this.getClickedCompanyInfo}
                   addFavorite={this.addToFavorites}
+                  getProfile={this.getProfileInfo}
                 />
 
                 :
