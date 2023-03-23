@@ -22,6 +22,7 @@ class App extends React.Component {
       companies: [],
       isModalShowing: false,
       modalInfo: {},
+      favorites: []
     }
   }
 
@@ -54,6 +55,24 @@ class App extends React.Component {
     }
   }
 
+  addToFavorites = async (company) => {
+    console.log(company);
+    try {
+
+      let updatedArray = [...this.state.favorites];
+      updatedArray.push(company)
+
+      this.setState({
+        favorites: updatedArray
+      })
+    } catch (error) {
+      this.setState({
+        error: true,
+        errorMsg: `ERROR: ${error.response.status}`
+      })
+    }
+  }
+
   render() {
     console.log(this.state);
     return (
@@ -73,10 +92,13 @@ class App extends React.Component {
             <Route
               exact path="/results"
               element={this.state.companies.length > 0 ?
+
                 <CompanyCardResult
                   data={this.state.companies}
                   getClickedComp={this.getClickedCompanyInfo}
+                  addFavorite={this.addToFavorites}
                 />
+
                 :
                 <NoResults />
               }

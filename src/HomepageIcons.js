@@ -8,7 +8,6 @@ export default class HomepageIcons extends React.Component {
   render() {
     return (
       <>
-      <Navbar/>
 
       <div className="d-flex flex-wrap justify-content-center">
         <div className="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">

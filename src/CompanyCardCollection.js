@@ -8,10 +8,10 @@ class Companycard extends React.Component {
   
   handleDelete = async (idx) => {
     const { data } = this.props;
-    const deletedCompany = data[idx];
+    const deletedProfile = data[idx];
 
     try {
-      await axios.delete(`${process.env.REACT_APP_SERVER}/companies/${deletedCompany.id}`);
+      await axios.delete(`${process.env.REACT_APP_SERVER}/companies/${deletedProfile.profile_email}`);
       const newData = data.filter((_, i) => i !== idx);
       this.props.updateData(newData);
     } catch (error) {
@@ -25,7 +25,6 @@ class Companycard extends React.Component {
     let cardComponent = data.map((company, idx) => {
       return (
         <>
-        <Navbar/>
 
         <Card key={idx} style={{ width: '20rem' }}>
           <Card.Title>{company.name}</Card.Title>
