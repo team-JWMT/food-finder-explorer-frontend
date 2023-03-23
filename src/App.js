@@ -4,6 +4,8 @@ import Navbar from './Navbar'
 import { withAuth0 } from '@auth0/auth0-react'
 import axios from 'axios';
 import CompanyCardResult from './CompanyCardResult';
+import CompanyCardCollection from './CompanyCardCollection'
+import HomepageIcons from './HomepageIcons'
 import {
   BrowserRouter as Router,
   Routes,
