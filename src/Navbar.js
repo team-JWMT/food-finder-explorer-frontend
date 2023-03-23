@@ -18,6 +18,7 @@ class Navigationbar extends React.Component {
           <Searchform
           handleInput={this.props.handleInput}
           searchSubmit={this.props.searchSubmit}
+          getProfile={this.props.getProfile}
           />
         </Container>
         <Container>
@@ -34,7 +35,9 @@ class Navigationbar extends React.Component {
                 <Profile />
               </>
             ) : (
-              <LoginButton />
+              <LoginButton 
+                
+              />
             )}
           </Nav>
         </Container>

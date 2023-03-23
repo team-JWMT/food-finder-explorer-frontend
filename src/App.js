@@ -10,7 +10,7 @@ import HomepageIcons from './HomepageIcons'
 import {
   BrowserRouter as Router,
   Routes,
-  Route
+  Route,
 } from "react-router-dom";
 import NoResults from './NoResults'
 
@@ -22,7 +22,10 @@ class App extends React.Component {
       companies: [],
       isModalShowing: false,
       modalInfo: {},
+      profile_name: '',
+      profile_email: ''
       favorites: []
+
     }
   }
 
@@ -32,6 +35,12 @@ class App extends React.Component {
     })
   }
 
+  getProfileInfo = (name, email) => {
+    this.setState({
+      profile_name: name,
+      profile_email: email
+    })
+  }
   handleInput = (e) => {
     const { id, value } = e.target;
 
@@ -41,7 +50,7 @@ class App extends React.Component {
   };
 
   getCompanyData = async (e) => {
-    e.preventDefault();
+
     try {
       let reqToServer = await axios.get(`${process.env.REACT_APP_SERVER}/search?term=${this.state.foodForm}&location=${this.state.locationForm}`);
       this.setState({
@@ -50,7 +59,7 @@ class App extends React.Component {
     } catch (error) {
       this.setState({
         error: true,
-        errorMsg: `ERROR: ${error.response.status}`
+        errorMsg: `ERROR: ${error.response}`
       })
     }
   }
@@ -82,6 +91,7 @@ class App extends React.Component {
             authorization={this.props.auth0.isAuthenticated}
             handleInput={this.handleInput}
             searchSubmit={this.getCompanyData}
+            getProfile={this.getProfileInfo}
           />
           <Routes>
             <Route
