@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Navbar from './Navbar'
 import axios from 'axios';
 import { withAuth0 } from '@auth0/auth0-react'
 
@@ -27,6 +28,10 @@ class Companycard extends React.Component {
   render() {
     let cardComponent = this.props.data.map((company, idx) => {
       return (
+
+
+        <>
+        <Navbar />
         <Card key={idx} onClick={() => this.props.getClickedComp(company)} style={{ width: '20rem' }}>
           <Card.Title>{company.name}</Card.Title>
           <Card.Img src={company.image_url} />
@@ -38,6 +43,9 @@ class Companycard extends React.Component {
             </Button>
           </Card.Body>
         </Card>
+        </>
+
+  
       );
     });
 
