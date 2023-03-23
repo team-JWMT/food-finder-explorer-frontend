@@ -1,5 +1,6 @@
 import React from 'react';
-import './App.css';
+import './css/App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
 import Navbar from './Navbar'
 import { withAuth0 } from '@auth0/auth0-react'
 import axios from 'axios';
