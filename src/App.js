@@ -23,7 +23,7 @@ class App extends React.Component {
       isModalShowing: false,
       modalInfo: {},
       profile_name: '',
-      profile_email: ''
+      profile_email: '',
       favorites: []
 
     }
