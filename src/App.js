@@ -5,6 +5,8 @@ import Navbar from './Navbar'
 import { withAuth0 } from '@auth0/auth0-react'
 import axios from 'axios';
 import CompanyCardResult from './CompanyCardResult';
+import CompanyCardCollection from './CompanyCardCollection'
+import HomepageIcons from './HomepageIcons'
 import {
   BrowserRouter as Router,
   Routes,
@@ -22,6 +24,8 @@ class App extends React.Component {
       modalInfo: {},
       profile_name: '',
       profile_email: ''
+      favorites: []
+
     }
   }
 
@@ -60,6 +64,24 @@ class App extends React.Component {
     }
   }
 
+  addToFavorites = async (company) => {
+    console.log(company);
+    try {
+
+      let updatedArray = [...this.state.favorites];
+      updatedArray.push(company)
+
+      this.setState({
+        favorites: updatedArray
+      })
+    } catch (error) {
+      this.setState({
+        error: true,
+        errorMsg: `ERROR: ${error.response.status}`
+      })
+    }
+  }
+
   render() {
     console.log(this.state);
     return (
@@ -80,10 +102,13 @@ class App extends React.Component {
             <Route
               exact path="/results"
               element={this.state.companies.length > 0 ?
+
                 <CompanyCardResult
                   data={this.state.companies}
                   getClickedComp={this.getClickedCompanyInfo}
+                  addFavorite={this.addToFavorites}
                 />
+
                 :
                 <NoResults />
               }
