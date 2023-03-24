@@ -4,6 +4,13 @@ import Form from 'react-bootstrap/Form';
 import { withAuth0 } from '@auth0/auth0-react'
 
 class Searchform extends React.Component {
+
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+
+    this.props.searchSubmit(e);
+  }
   
   render() {
     return (
