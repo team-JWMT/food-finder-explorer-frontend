@@ -11,6 +11,13 @@ import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 
 class Navigationbar extends React.Component {
+
+  handleDelete = async () => {
+    this.props.deleteProfile();
+    alert('Your profile has been deleted, alongside your collection.')
+    window.location.reload(false);
+  }
+
   render() {
     return (
       <Navbar bg="light" expand="lg">
@@ -26,7 +33,6 @@ class Navigationbar extends React.Component {
             <Nav.Link
               as={Link}
               to="/collection"
-              onClick={this.props.sendToDB}
             >
               My Collection
             </Nav.Link>
@@ -36,10 +42,14 @@ class Navigationbar extends React.Component {
           <Nav>
             {this.props.auth0.isAuthenticated ? (
               <>
-                <Button>Delete</Button>
+                <Button
+                  onClick={() => this.handleDelete()}
+                >
+                  Delete
+                </Button>
                 <LogoutButton />
-                <Profile 
-                  checkProfile={this.props.checkProfile} 
+                <Profile
+                  checkProfile={this.props.checkProfile}
                 />
               </>
             ) : (

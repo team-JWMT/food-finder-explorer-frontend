@@ -1,10 +1,9 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import Navbar from './Navbar'
 import axios from 'axios';
 
-class Companycard extends React.Component {
+class CompanyCardCollection extends React.Component {
   
   handleDelete = async (idx) => {
     const { data } = this.props;
@@ -32,7 +31,7 @@ class Companycard extends React.Component {
           <Card.Body>
             City: {company.location.city}, State: {company.location.state}
             Rating: {company.rating}
-            <Button variant="primary" onClick={() => this.handleDelete(idx)}>
+            <Button variant="primary" onClick={() => this.props.removeFavorite(company)}>
               Delete
             </Button>
           </Card.Body>
@@ -49,4 +48,4 @@ class Companycard extends React.Component {
   }
 }
 
-export default Companycard;
+export default CompanyCardCollection;

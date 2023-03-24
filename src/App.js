@@ -89,10 +89,10 @@ class App extends React.Component {
     }
   }
 
-  deleteProfile = async (email) => {
+  deleteProfile = async () => {
     try {
-      const response = await axios.delete(`${process.env.REACT_APP_SERVER}/collection/${email}`);
-      console.log(response, 'Profile has been removed');
+      await axios.delete(`${process.env.REACT_APP_SERVER}/collection/${this.state.profile_email}`);
+      console.log('Profile has been removed');
       this.setState({
         favorites: [],
         profile_name: '',
@@ -124,6 +124,25 @@ class App extends React.Component {
         error: true,
         errorMsg: `ERROR: ${error.response}`
       })
+    }
+  }
+
+  removeFromFavorites = async (company) => {
+    try {
+      let updatedArray = [...this.state.favorites];
+      updatedArray.splice(updatedArray.indexOf(company), 1)
+      this.setState({
+        favorites: updatedArray
+      }, async () => {
+        let url = `${process.env.REACT_APP_SERVER}/collection/${this.state.profile_email}`
+        await axios.put(url, { favorited: this.state.favorites });
+        console.log(this.state.favorites)
+      });
+    } catch (error) {
+      this.setState({
+        error: true,
+        errorMsg: `ERROR: ${error.response.status}`
+      });
     }
   }
 
@@ -160,12 +179,13 @@ class App extends React.Component {
             searchSubmit={this.getCompanyData}
             sendToDB={this.profileToBackend}
             checkProfile={this.checkProfileExists}
+            deleteProfile={this.deleteProfile}
           />
           <Routes>
             <Route
               exact path="/"
-              element={<HomepageIcons/>}
-              >
+              element={<HomepageIcons />}
+            >
             </Route>
             <Route
               exact path="/results"
@@ -191,14 +211,11 @@ class App extends React.Component {
               exact path="/collection"
               element={this.state.favorites.length > 0 ?
 
-                <CompanyCardResult
-                style={{textAlign: "center"}}
+                <CompanyCardCollection
+                  style={{ textAlign: "center" }}
                   data={this.state.favorites}
                   getClickedComp={this.getClickedCompanyInfo}
-                  addFavorite={this.addToFavorites}
-                  getProfile={this.getProfileInfo}
-                  checkProfile={this.checkProfileExists}
-
+                  removeFavorite={this.removeFromFavorites}
                 />
 
                 :
