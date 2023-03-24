@@ -43,6 +43,7 @@ class Navigationbar extends React.Component {
             {this.props.auth0.isAuthenticated ? (
               <>
                 <Button
+                  variant="danger"
                   onClick={() => this.handleDelete()}
                 >
                   Delete
