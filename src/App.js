@@ -2,6 +2,7 @@ import React from 'react';
 import './css/App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Navbar from './Navbar'
+import Footer from './Footer'
 import { withAuth0 } from '@auth0/auth0-react'
 import axios from 'axios';
 import CompanyCardResult from './CompanyCardResult';
