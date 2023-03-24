@@ -88,6 +88,20 @@ class App extends React.Component {
     }
   }
 
+  deleteProfile = async (email) => {
+    try {
+      const response = await axios.delete(`${process.env.REACT_APP_SERVER}/collection/${email}`);
+      console.log(response, 'Profile has been removed');
+      this.setState({
+        favorites: [],
+        profile_name: '',
+        profile_email: ''
+      })
+    } catch (error) {
+      console.error(error); 
+    }
+  }
+
   handleInput = (e) => {
     const { id, value } = e.target;
 
