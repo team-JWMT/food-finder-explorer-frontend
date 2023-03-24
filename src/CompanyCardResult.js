@@ -11,12 +11,9 @@ class Companycard extends React.Component {
     const { isAuthenticated } = this.props.auth0;
 
     if (isAuthenticated) {
-
-      this.props.checkProfile(this.props.auth0.user.email);
-
       let addStore = this.props.addFavorite;
+
       addStore(company);
-      this.props.getProfile(this.props.auth0.user.name, this.props.auth0.user.email);
 
     } else {
       alert("Sign in to add company to collection");

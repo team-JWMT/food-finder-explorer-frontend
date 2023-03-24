@@ -10,6 +10,9 @@ import { withAuth0 } from '@auth0/auth0-react'
 import { Link } from 'react-router-dom';
 
 class Navigationbar extends React.Component {
+  
+  
+  
   render() {
 
     return (
@@ -37,7 +40,9 @@ class Navigationbar extends React.Component {
             {this.props.auth0.isAuthenticated ? (
               <>
                 <LogoutButton />
-                <Profile />
+                <Profile 
+                  checkProfile={this.props.checkProfile} 
+                />
               </>
             ) : (
               <LoginButton
