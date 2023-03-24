@@ -8,6 +8,7 @@ import LogoutButton from './Logout';
 import Profile from './Profile';
 import { withAuth0 } from '@auth0/auth0-react'
 import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button'
 
 class Navigationbar extends React.Component {
   render() {
@@ -30,6 +31,7 @@ class Navigationbar extends React.Component {
           <Nav>
             {this.props.auth0.isAuthenticated ? (
               <>
+               <Button>Delete</Button>
                 <LogoutButton />
                 <Profile />
               </>
