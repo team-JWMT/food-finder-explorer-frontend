@@ -149,7 +149,7 @@ class App extends React.Component {
           <Routes>
             <Route
               exact path="/"
-              element={<HomepageIcons/>}
+              element={<HomepageIcons />}
             >
             </Route>
             <Route
@@ -176,13 +176,13 @@ class App extends React.Component {
               exact path="/collection"
               element={this.state.favorites.length > 0 ?
 
-                <CompanyCardResult
-                style={{textAlign: "center"}}
+                <CompanyCardCollection
+                  style={{ textAlign: "center" }}
                   data={this.state.favorites}
                   getClickedComp={this.getClickedCompanyInfo}
-                  addFavorite={this.addToFavorites}
-                  getProfile={this.getProfileInfo}
-                  checkProfile={this.checkProfileExists}
+                  removeFavorite={this.addToFavorites}
+                  
+                  
 
                 />
 

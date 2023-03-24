@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 import Navbar from './Navbar'
 import axios from 'axios';
 
-class Companycard extends React.Component {
+class CompanyCardCollection extends React.Component {
   
   handleDelete = async (idx) => {
     const { data } = this.props;
@@ -49,4 +49,4 @@ class Companycard extends React.Component {
   }
 }
 
-export default Companycard;
+export default CompanyCardCollection;

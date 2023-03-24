@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 import { withAuth0 } from '@auth0/auth0-react'
 
 
-class Companycard extends React.Component {
+class CompanyCardResult extends React.Component {
 
   handleAdd = async (company) => {
     console.log(company)
@@ -50,4 +50,4 @@ class Companycard extends React.Component {
   }
 }
 
-export default withAuth0(Companycard);
+export default withAuth0(CompanyCardResult);
