@@ -88,10 +88,10 @@ class App extends React.Component {
     }
   }
 
-  deleteProfile = async (email) => {
+  deleteProfile = async () => {
     try {
-      const response = await axios.delete(`${process.env.REACT_APP_SERVER}/collection/${email}`);
-      console.log(response, 'Profile has been removed');
+      await axios.delete(`${process.env.REACT_APP_SERVER}/collection/${this.state.profile_email}`);
+      console.log('Profile has been removed');
       this.setState({
         favorites: [],
         profile_name: '',
@@ -178,6 +178,7 @@ class App extends React.Component {
             searchSubmit={this.getCompanyData}
             sendToDB={this.profileToBackend}
             checkProfile={this.checkProfileExists}
+            deleteProfile={this.deleteProfile}
           />
           <Routes>
             <Route
