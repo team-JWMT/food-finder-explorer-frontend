@@ -126,6 +126,25 @@ class App extends React.Component {
     }
   }
 
+  removeFromFavorites = async (company) => {
+    try {
+      let updatedArray = [...this.state.favorites];
+      updatedArray.splice(updatedArray.indexOf(company), 1)
+      this.setState({
+        favorites: updatedArray
+      }, async () => {
+        let url = `${process.env.REACT_APP_SERVER}/collection/${this.state.profile_email}`
+        await axios.put(url, { favorited: this.state.favorites });
+        console.log(this.state.favorites)
+      });
+    } catch (error) {
+      this.setState({
+        error: true,
+        errorMsg: `ERROR: ${error.response.status}`
+      });
+    }
+  }
+
   addToFavorites = async (company) => {
     console.log(company);
     try {
@@ -163,7 +182,7 @@ class App extends React.Component {
           <Routes>
             <Route
               exact path="/"
-              element={<HomepageIcons/>}
+              element={<HomepageIcons />}
             >
             </Route>
             <Route
@@ -190,14 +209,11 @@ class App extends React.Component {
               exact path="/collection"
               element={this.state.favorites.length > 0 ?
 
-                <CompanyCardResult
-                style={{textAlign: "center"}}
+                <CompanyCardCollection
+                  style={{ textAlign: "center" }}
                   data={this.state.favorites}
                   getClickedComp={this.getClickedCompanyInfo}
-                  addFavorite={this.addToFavorites}
-                  getProfile={this.getProfileInfo}
-                  checkProfile={this.checkProfileExists}
-
+                  removeFavorite={this.removeFromFavorites}
                 />
 
                 :
