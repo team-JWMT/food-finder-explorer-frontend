@@ -8,35 +8,47 @@ import LogoutButton from './Logout';
 import Profile from './Profile';
 import { withAuth0 } from '@auth0/auth0-react'
 import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button'
 
 class Navigationbar extends React.Component {
+  
+  
+  
   render() {
 
     return (
       <Navbar bg="light" expand="lg" >
         <Container>
           <Searchform
-          handleInput={this.props.handleInput}
-          searchSubmit={this.props.searchSubmit}
-          getProfile={this.props.getProfile}
+            handleInput={this.props.handleInput}
+            searchSubmit={this.props.searchSubmit}
           />
         </Container>
         <Container>
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/">Home</Nav.Link>
-            <Nav.Link as={Link} to="/collection">My Collection</Nav.Link>
+            <Nav.Link
+              as={Link}
+              to="/collection"
+              onClick={this.props.sendToDB}
+            >
+              My Collection
+            </Nav.Link>
             <Nav.Link as={Link} to="/results">Results</Nav.Link>
           </Nav>
 
           <Nav>
             {this.props.auth0.isAuthenticated ? (
               <>
+               <Button>Delete</Button>
                 <LogoutButton />
-                <Profile />
+                <Profile 
+                  checkProfile={this.props.checkProfile} 
+                />
               </>
             ) : (
-              <LoginButton 
-                
+              <LoginButton
+
               />
             )}
           </Nav>

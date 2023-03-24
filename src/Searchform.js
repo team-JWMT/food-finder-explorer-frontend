@@ -5,15 +5,11 @@ import { withAuth0 } from '@auth0/auth0-react'
 
 class Searchform extends React.Component {
 
+
   handleSubmit = (e) => {
     e.preventDefault();
 
-    if(this.props.auth0.isAuthenticated) {
-      this.props.getProfile(this.props.auth0.user.name, this.props.auth0.user.email);
-    }
-
     this.props.searchSubmit(e);
-
   }
   
   render() {
