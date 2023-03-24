@@ -14,6 +14,7 @@ class CompanyModal extends React.Component {
     this.setState({ showHide: !this.state.showHide })
   }
 
+
   render() {
     return (
        <>
@@ -25,7 +26,7 @@ class CompanyModal extends React.Component {
           <Modal.Body style={{display: "flex", flexDirection: "column"}}>
             <p>Restaurant Rating: {this.props.modalInfo.rating}</p>
             <p>Review Count: {this.props.modalInfo.review_count}</p>
-            <p>{this.props.modalInfo.url}</p>
+           <p><a href='{this.props.modalInfo.url}'>Visit Website</a></p>
             <p>{this.props.modalInfo.display_phone}</p>
 
           </Modal.Body>
