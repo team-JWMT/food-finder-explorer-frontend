@@ -137,6 +137,7 @@ class App extends React.Component {
               element={this.state.favorites.length > 0 ?
 
                 <CompanyCardResult
+                style={{textAlign: "center"}}
                   data={this.state.favorites}
                   getClickedComp={this.getClickedCompanyInfo}
                 />

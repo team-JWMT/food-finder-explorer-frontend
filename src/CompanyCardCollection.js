@@ -26,12 +26,12 @@ class Companycard extends React.Component {
       return (
         <>
 
-        <Card key={idx} style={{ width: '20rem' }}>
+        <Card key={idx} style={{ textAlign: "center"}} >
           <Card.Title>{company.name}</Card.Title>
           <Card.Img src={company.image_url} />
           <Card.Body>
-            {company.location.city}, {company.location.state}
-            {company.rating}
+            City: {company.location.city}, State: {company.location.state}
+            Rating: {company.rating}
             <Button variant="primary" onClick={() => this.handleDelete(idx)}>
               Delete
             </Button>

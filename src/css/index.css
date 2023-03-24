@@ -29,3 +29,16 @@ body {
   flex-direction: row;
 }
 
+.cardImage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cardDetails{
+ display:flex;
+ flex-direction: row;
+}
+
+.cardDetails p{
+  margin: 4px ;
+}
