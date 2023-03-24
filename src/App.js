@@ -112,6 +112,25 @@ class App extends React.Component {
     }
   }
 
+  removeFromFavorites = async (company) => {
+    try {
+      let updatedArray = [...this.state.favorites];
+      updatedArray.splice(updatedArray.indexOf(company), 1)
+      this.setState({
+        favorites: updatedArray
+      }, async () => {
+        let url = `${process.env.REACT_APP_SERVER}/collection/${this.state.profile_email}`
+        await axios.put(url, { favorited: this.state.favorites });
+        console.log(this.state.favorites)
+      });
+    } catch (error) {
+      this.setState({
+        error: true,
+        errorMsg: `ERROR: ${error.response.status}`
+      });
+    }
+  }
+
   addToFavorites = async (company) => {
     console.log(company);
     try {
@@ -180,10 +199,7 @@ class App extends React.Component {
                   style={{ textAlign: "center" }}
                   data={this.state.favorites}
                   getClickedComp={this.getClickedCompanyInfo}
-                  removeFavorite={this.addToFavorites}
-                  
-                  
-
+                  removeFavorite={this.removeFromFavorites}
                 />
 
                 :

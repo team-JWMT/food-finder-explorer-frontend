@@ -32,7 +32,7 @@ class CompanyCardCollection extends React.Component {
           <Card.Body>
             City: {company.location.city}, State: {company.location.state}
             Rating: {company.rating}
-            <Button variant="primary" onClick={() => this.handleDelete(idx)}>
+            <Button variant="primary" onClick={() => this.props.removeFavorite(company)}>
               Delete
             </Button>
           </Card.Body>
